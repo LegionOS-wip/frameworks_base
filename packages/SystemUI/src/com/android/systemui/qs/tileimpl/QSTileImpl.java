@@ -532,6 +532,9 @@ public abstract class QSTileImpl<TState extends State> implements QSTile, Lifecy
                 Settings.System.QS_TILE_STYLE, 0, UserHandle.USER_CURRENT);
         boolean shouldDisco = Settings.System.getIntForUser(context.getContentResolver(),
                 Settings.System.QS_TILES_BG_DISCO, 0, UserHandle.USER_CURRENT) == 1;
+        boolean qsIconPrimary = Settings.System.getIntForUser(context.getContentResolver(),
+                    Settings.System.QS_TILE_ICON_PRIMARY, 0, UserHandle.USER_CURRENT) == 1;
+
         switch (state) {
             case Tile.STATE_UNAVAILABLE:
                 return Utils.getDisabled(context,
@@ -557,7 +560,9 @@ public abstract class QSTileImpl<TState extends State> implements QSTile, Lifecy
                     return context.getResources().getColor(R.color.qs_tile_oos);
                 } else if (setQsUseNewTint == 3){
                     return Utils.getColorAttrDefaultColor(context, android.R.attr.textColorPrimaryInverse);
-		} else {
+		} else if (qsIconPrimary) {
+                         return Utils.getColorAttrDefaultColor(context, android.R.attr.textColorPrimary);
+                     } else {
                         return Utils.getColorAttrDefaultColor(context, android.R.attr.colorPrimary);
                     }
                 }

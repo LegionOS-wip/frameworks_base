@@ -4382,6 +4382,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_TILES_BG_DISCO),
                     false, this, UserHandle.USER_ALL);
+	    resolver.registerContentObserver(Settings.System.getUriFor(
+		    Settings.System.QS_TILE_ICON_PRIMARY),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
