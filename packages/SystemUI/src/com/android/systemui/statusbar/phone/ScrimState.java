@@ -93,7 +93,7 @@ public enum ScrimState {
     BOUNCER {
         @Override
         public void prepare(ScrimState previousState) {
-            mBehindAlpha = mDefaultScrimAlpha;
+            mBehindAlpha = mScrimBehindAlphaKeyguard;
             mFrontAlpha = 0f;
             mBubbleAlpha = 0f;
         }
@@ -107,7 +107,7 @@ public enum ScrimState {
         public void prepare(ScrimState previousState) {
             mBehindAlpha = 0;
             mBubbleAlpha = 0f;
-            mFrontAlpha = mDefaultScrimAlpha;
+            mFrontAlpha = mScrimBehindAlphaKeyguard;
         }
     },
 
