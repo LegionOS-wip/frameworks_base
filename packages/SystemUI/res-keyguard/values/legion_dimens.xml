@@ -4,4 +4,10 @@
     <!-- The minimum bottom margin of the keyguard security container -->
     <dimen name="kg_security_container_min_bottom_margin">0dp</dimen>
 
+    <dimen name="keyguard_eca_top_margin">18.0dip</dimen>
+    <dimen name="keyguard_password_height">80.0dip</dimen>
+    <dimen name="num_pad_key_margin_end">20.0dip</dimen>
+    <dimen name="num_pad_key_width">84.0dip</dimen>
+    <dimen name="num_pad_row_margin_bottom">16.0dip</dimen>
+
 </resources>

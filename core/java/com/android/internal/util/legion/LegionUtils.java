@@ -375,4 +375,15 @@ public class LegionUtils {
         context.getTheme().resolveAttribute(android.R.attr.colorAccent, value, true);
         return value.data;
     }
- }
+    // Check if system is in dark mode
+    public static boolean isDarkMode() {
+        IUiModeManager uiModeManager = IUiModeManager.Stub.asInterface(
+                    ServiceManager.getService(Context.UI_MODE_SERVICE));
+        try {
+            return uiModeManager.getNightMode() == 2;
+        } catch (android.os.RemoteException e) {
+            // assume light mode
+            return false;
+	}
+    }
+}
