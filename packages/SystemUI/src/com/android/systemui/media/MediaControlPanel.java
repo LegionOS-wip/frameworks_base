@@ -23,6 +23,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.content.res.MonetWannabe;
 import android.graphics.Outline;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
@@ -220,7 +221,10 @@ public class MediaControlPanel {
         }
         mKey = key;
         MediaSession.Token token = data.getToken();
-        mBackgroundColor = data.getBackgroundColor();
+        if (MonetWannabe.isMonetEnabled(mContext))
+            mBackgroundColor = mContext.getResources().getColor(android.R.color.accent_background_device_default, mContext.getTheme());
+        else
+            mBackgroundColor = data.getBackgroundColor();
         if (mToken == null || !mToken.equals(token)) {
             mToken = token;
         }
