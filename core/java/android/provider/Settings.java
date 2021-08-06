@@ -6083,6 +6083,13 @@ public final class Settings {
         public static final String FOD_COLOR = "fod_color";
 
         /**
+         * Whether to change the transparency of the qs panel
+         * @hide
+         */
+        public static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+
+
+	/**
          * Whether to disco the QS tiles or not
          * @hide
          */
@@ -6286,6 +6293,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(STATUSBAR_ICONS_STYLE);
             PRIVATE_SETTINGS.add(COLOR_BUCKET_OVERLAY);
             PRIVATE_SETTINGS.add(QS_TILES_BG_DISCO);
+            PRIVATE_SETTINGS.add(QS_PANEL_BG_ALPHA);
         }
 
         /**
