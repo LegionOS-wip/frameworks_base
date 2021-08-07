@@ -98,14 +98,6 @@ public class NumPadKey extends ViewGroup {
         mDigitText = (TextView) findViewById(R.id.digit_text);
         mDigitText.setText(Integer.toString(mDigit));
 
-        if (mDigit >= 0) {
-        }
-
-        a = context.obtainStyledAttributes(attrs, android.R.styleable.View);
-        if (!a.hasValueOrEmpty(android.R.styleable.View_background)) {
-            setBackground(mContext.getDrawable(R.drawable.ripple_drawable_pin));
-        }
-        a.recycle();
         setContentDescription(mDigitText.getText().toString());
     }
 
