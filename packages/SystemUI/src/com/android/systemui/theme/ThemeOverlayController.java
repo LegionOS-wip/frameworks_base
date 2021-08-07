@@ -28,6 +28,8 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -40,6 +42,7 @@ import com.android.systemui.SystemUI;
 import com.android.systemui.broadcast.BroadcastDispatcher;
 import com.android.systemui.dagger.qualifiers.Background;
 import com.android.systemui.dot.MonetWatcher;
+import com.android.systemui.settings.CurrentUserTracker;
 
 import com.google.android.collect.Sets;
 
@@ -72,6 +75,8 @@ public class ThemeOverlayController extends SystemUI {
     private BroadcastDispatcher mBroadcastDispatcher;
     private final Handler mBgHandler;
 
+    private CurrentUserTracker mUserTracker;
+
     @Inject
     public ThemeOverlayController(Context context, BroadcastDispatcher broadcastDispatcher,
             @Background Handler bgHandler) {
@@ -90,7 +95,6 @@ public class ThemeOverlayController extends SystemUI {
                 mContext.getString(R.string.launcher_overlayable_package),
                 mContext.getString(R.string.themepicker_overlayable_package));
         final IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_USER_SWITCHED);
         filter.addAction(Intent.ACTION_MANAGED_PROFILE_ADDED);
         mBroadcastDispatcher.registerReceiverWithHandler(new BroadcastReceiver() {
             @Override
@@ -164,6 +168,15 @@ public class ThemeOverlayController extends SystemUI {
         mContext.getContentResolver().registerContentObserver(
                 Settings.Secure.getUriFor(Settings.Secure.MONET_WALLPAPER_COLOR_PICKER),
                 false, observer, UserHandle.USER_ALL);
+
+        mUserTracker = new CurrentUserTracker(mBroadcastDispatcher) {
+            @Override
+            public void onUserSwitched(int newUserId) {
+                if (DEBUG) Log.d(TAG, "onUserSwitched");
+                updateThemeOverlays();
+            }
+        };
+        mUserTracker.startTracking();
     }
 
     private void updateThemeOverlays() {
