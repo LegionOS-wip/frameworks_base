@@ -2,7 +2,16 @@
     <color name="toast_text">@color/white</color>
     <!-- Value of these colors are not used. They are replaced later -->
     <color name="accent_background_device_default">#fefefe</color>
+
+    <!-- Monet System Colors-->
     <color name="accent_overlay_device_default_light">#fefefe</color>
     <color name="accent_overlay_device_default_dark">#fefefe</color>
+
+    <!-- Monet Lockscreen Colors-->
+    <color name="monet_lockscreen_background_device_default">#000000</color>
+    <color name="monet_lockscreen_background_secondary_device_default">#212121</color>
+
+    <!-- Monet Extra Colors-->
+
     <color name="monet_contextual_color_device_default">#212121</color>
 </resources>
