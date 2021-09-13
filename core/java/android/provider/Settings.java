@@ -6113,6 +6113,12 @@ public final class Settings {
          * @hide
          */
         public static final String FOD_COLOR = "fod_color";
+        
+        /**
+         * Whether to show lock icon on lockscreen
+         * @hide
+         */
+        public static final String LOCKSCREEN_LOCK_ICON = "lockscreen_lock_icon";
 
         /**
          * Whether to change the transparency of the qs panel
