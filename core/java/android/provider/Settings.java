@@ -5860,6 +5860,10 @@ public final class Settings {
          * @hide
          */
         public static final String SHOW_FPS_OVERLAY = "show_fps_overlay";
+    
+    	/** reTicker **/
+        public static final String RETICKER_STATUS = "reticker_status";
+        public static final String RETICKER_COLORED = "reticker_colored";
 
         /**
          * Whether to enable PULSE Edge lights
