@@ -251,8 +251,7 @@ public abstract class QSTileImpl<TState extends State> implements QSTile, Lifecy
     public void vibrateTile(int duration) {
         if (!isVibrationEnabled()) { return; }
         if (mVibrator != null) {
-            if (mVibrator.hasVibrator())
-                mVibrator.vibrate(VibrationEffect.createOneShot(20, VibrationEffect.DEFAULT_AMPLITUDE));
+            if (mVibrator.hasVibrator()) { mVibrator.vibrate(duration); } 
         }
     }
 
