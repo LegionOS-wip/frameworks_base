@@ -41,6 +41,7 @@ import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
 import android.view.InputDevice;
 import android.provider.MediaStore;
+import android.app.IUiModeManager;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.content.om.IOverlayManager;

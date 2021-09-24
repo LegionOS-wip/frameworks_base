@@ -973,7 +973,7 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
     @Override
     public void onColorsChanged(ColorExtractor colorExtractor, int which) {
        // mColors = mColorExtractor.getNeutralColors();
-        updateThemeColors()
+        updateThemeColors();
         scheduleUpdate();
     }
     private void updateThemeColors() {
