@@ -14,7 +14,11 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
   -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/qs_background_dark" />
-    <corners android:radius="?android:attr/dialogCornerRadius" />
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:end="56dp">
+        <shape>
+            <solid android:color="@color/qs_background_dark" />
+            <corners android:radius="300dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -58,6 +58,7 @@ import com.android.systemui.util.wakelock.DelayedWakeLock;
 import com.android.systemui.util.wakelock.WakeLock;
 
 import com.android.settingslib.Utils;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.annotation.Retention;
@@ -465,9 +466,10 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
             ScrimState scrimState = mState;
             if ((scrimState == ScrimState.SHADE_LOCKED || scrimState == ScrimState.KEYGUARD || scrimState == ScrimState.PULSING || scrimState == ScrimState.BUBBLE_EXPANDED) && mExpansionAffectsAlpha) {
                 applyAndDispatchExpansion();
-	    }
-	}
+            }
+        }
     }
+
 
     private void setOrAdaptCurrentAnimation(View scrim) {
         float alpha = getCurrentScrimAlpha(scrim);
@@ -514,12 +516,11 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
             }
             mBehindTint = ColorUtils.blendARGB(ScrimState.BOUNCER.getBehindTint(),
                     mState.getBehindTint(), interpolatedFract);
-
             float f = mQsExpansion;
             if (f > 0.0f) {
                 mBehindAlpha = MathUtils.lerp(mBehindAlpha, mDefaultScrimAlpha, f);
                 mBehindTint = ColorUtils.blendARGB(mBehindTint, ScrimState.SHADE_LOCKED.getBehindTint(), mQsExpansion);
-	    }
+            }
 
         }
         if (isNaN(mBehindAlpha) || isNaN(mInFrontAlpha)) {
@@ -972,10 +973,11 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
 
     @Override
     public void onColorsChanged(ColorExtractor colorExtractor, int which) {
-       // mColors = mColorExtractor.getNeutralColors();
+        //mColors = mColorExtractor.getNeutralColors();
         updateThemeColors();
         scheduleUpdate();
     }
+
     private void updateThemeColors() {
         ScrimView scrimView = mScrimBehind;
         if (scrimView == null) return;
@@ -993,7 +995,8 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, OnCo
         ColorExtractor.GradientColors gradientColors = mColors;
         gradientColors.setSupportsDarkText(ColorUtils.calculateContrast(gradientColors.getMainColor(), -1) > 4.5d);
         mNeedsDrawableColorUpdate = true;
-	}
+    }
+
 
     @Override
     public void dump(FileDescriptor fd, PrintWriter pw, String[] args) {

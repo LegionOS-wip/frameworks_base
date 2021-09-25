@@ -81,7 +81,6 @@ public class QSContainerImpl extends FrameLayout implements
     private View mQSPanelContainer;
 
     private View mBackground;
-    private View mBackgroundGradient;
     private View mStatusBarBackground;
 
     private int mSideMargins;
@@ -117,7 +116,6 @@ public class QSContainerImpl extends FrameLayout implements
         mQSCustomizer = findViewById(R.id.qs_customize);
         mBackground = findViewById(R.id.quick_settings_background);
         mStatusBarBackground = findViewById(R.id.quick_settings_status_bar_background);
-        mBackgroundGradient = findViewById(R.id.quick_settings_gradient_view);
         mBackgroundImage = findViewById(R.id.qs_header_image_view);
         mBackgroundImage.setClipToOutline(true);
         updateResources();
