@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Legion Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="statusbar_items_title">Durum çubuğu simgesi</string>
+    <string name="status_bar_vpn">VPN</string>
+
+     <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">Eşitleme</string>
+    <string name="accessibility_quick_settings_sync_off">Eşitleme kapalı</string>
+    <string name="accessibility_quick_settings_sync_on">Eşitleme açık</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Eşitleme kapatıldı</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Eşitleme açıldı</string>
+
+    <!-- Always on Display Tile -->
+    <string name="quick_settings_always_on_display_label">Ortam ekranı</string>
+    <string name="accessibility_quick_settings_always_on_display_off">Ortam ekranı kapalı.</string>
+    <string name="accessibility_quick_settings_always_on_display_on">Ortam ekranı açık.</string>
+    <string name="accessibility_quick_settings_always_on_display_changed_off">Ortam ekranı kapatıldı.</string>
+    <string name="accessibility_quick_settings_always_on_display_changed_on">Ortam ekranı açıldı.</string>
+
+    <!-- Advance location quick setting tile -->
+    <string name="quick_settings_secondary_location_off"></string>
+    <string name="quick_settings_location_secondary_battery_saving">Pil tasarrufu</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Konum bildirimi: pil tasarrufu.</string>
+    <string name="quick_settings_location_secondary_gps_only">Yalnızca sensörler</string>
+    <string name="accessibility_quick_settings_location_gps_only">Konum bildirimi: yalnızca sensörler.</string>
+    <string name="quick_settings_location_secondary_high_accuracy">Yüksek doğruluk</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Konum bildirimi: yüksek doğruluk.</string>
+
+    <!-- Advanced restart -->
+    <string name="global_action_reboot">Yeniden başlat</string>
+    <string name="global_action_reboot_system">System</string>
+    <string name="global_action_reboot_progress">Yeniden başlatılıyor\u2026</string>
+    <string name="global_action_reboot_recovery">Kurtarma</string>
+    <string name="global_action_reboot_recovery_progress">Kurtarma modunda yeniden başlatılıyor\u2026</string>
+    <string name="global_action_reboot_bootloader">Ön yükleyici</string>
+    <string name="global_action_reboot_bootloader_progress">Ön yükleyici modunda yeniden başlatılıyor\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_fastboot_progress">Fastboot modunda yeniden başlatılıyor\u2026</string>
+    <string name="global_action_restart_systemui">Sistem arayüzü</string>
+    <string name="global_action_settings">Ayarlar</string>
+    <string name="global_action_screenshot">Ekran görüntüsü</string>
+    <string name="global_action_screenrecord">Ekran kaydı</string>
+    <string name="global_action_flashlight">El feneri</string>
+
+    <!-- Label for current user in power menu options dialog -->
+    <string name="global_action_current_user">Geçerli</string>
+
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Hızlı şarj oluyor (tam doluma <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
+    <string name="keyguard_plugged_in_dash_charging">Hızlı Şarj</string>
+    
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Warp Şarj Oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
+    <string name="keyguard_plugged_in_warp_charging">Warp Şarj</string>
+
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">İşlemci bilgisi</string>
+    <string name="accessibility_quick_settings_cpuinfo_off">İşlemci bilgisi kapalı</string>
+    <string name="accessibility_quick_settings_cpuinfo_on">İşlemci bilgisi açık</string>
+    <string name="accessibility_quick_settings_cpuinfo_changed_off">İşlemci bilgisi kapatıldı</string>
+    <string name="accessibility_quick_settings_cpuinfo_changed_on">İşlemci bilgisi açıldı</string>
+
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Kafein</string>
+    <string name="quick_settings_caffeine_label_off">Kapalı</string>
+    <string name="accessibility_quick_settings_caffeine_off">Kafein kapalı</string>
+    <string name="accessibility_quick_settings_caffeine_on">Kafein açık</string>
+
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Ekran görüntüsü</string>
+    <string name="quick_settings_region_screenshot_label">Kısmi ekran görüntüsü</string>
+
+    <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">Donanım tuşları açık</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Donanım tuşları kapalı</string>
+    <string name="quick_settings_hwkeys_label">Donanım tuşları</string>
+
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Ses</string>
+    <string name="quick_settings_sound_ring">Zil sesi</string>
+    <string name="quick_settings_sound_vibrate">Titreşim</string>
+    <string name="quick_settings_sound_dnd">Rahatsız etmeyin</string>
+
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Mobil veri kartını değiştir</string>
+    <string name="qs_data_switch_changed_1">Mobil veri için Sim 1 kullanılıyor</string>
+    <string name="qs_data_switch_changed_2">Mobil veri için Sim 2 kullanılıyor</string>
+    <string name="qs_data_switch_toast_0">Şu anda takılı SIM kart yok</string>
+    <string name="qs_data_switch_toast_1">Şuan yalnızca bir Sim kart takılı</string>
+
+
+    <!-- SleepScreen QS Tile -->
+    <string name="quick_settings_sleepscreen_label">Ekranı Kapat</string>
+
+    <string name="omnijaws_service_error">Hata</string>
+    <string name="omnijaws_service_unkown">Hava durumu verisi yok</string>
+    <string name="omnijaws_service_error_long">Hava durumu verisi yüklenemedi</string>
+    <string name="omnijaws_service_disabled">Servis devre dışı</string>
+    <string name="omnijaws_detail_header">Hava durumu</string>
+    <string name="omnijaws_label_default">Hava durumu</string>
+    <string name="omnijaws_current_text">Şimdi</string>
+    <string name="omnijaws_package_not_available">OmniJaws mevcut değil</string>
+    <string name="omnijaws_service_last_update">Son güncelleme:</string>
+
+    <!-- Reboot/Recovery QS tile -->
+    <string name="quick_settings_reboot_label">Yeniden başlat</string>
+    <string name="quick_settings_reboot_recovery_label">Kurtarma</string>
+
+    <string name="lockscreen_default">Varsayılan</string>
+    <string name="lockscreen_hidden">Hiçbiri</string>
+    <string name="custom_hint">Başlatmak için simgeden kaydırın</string>
+
+    <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Karartma</string>
+    <string name="quick_settings_dc_brightness_mode">Parlaklık modu</string>
+    <string name="quick_settings_dc_full_auto">Otomatik mod</string>
+
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Günlük veri kullanımı</string>
+
+	<!-- App Lock -->
+    <string name="applock_locked">&#160;kilitli</string>
+    <string name="applock_fingerprint_face">, açmak için parmak iziniz veya yüzünüz</string>
+    <string name="applock_face">&#160;veya açmak için yüzünüz</string>
+    <string name="applock_fingerprint">&#160;veya açmak için parmak iziniz</string>
+    <string name="applock_credential">&#160;açmak için</string>
+    <string name="applock_unlock">Kilidi aç</string>
+
+    <string name="biometric_dialog_button_use_face">Yüz kullan</string>
+
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">Yenileme hızı</string>
+
+    <string name="quick_settings_sound_search">Sesli arama</string>
+    <string name="quick_settings_sound_search_no_app">Üzgünüm, sesli arama uygulamanız yoksa bu işe yaramaz.</string>
+
+    <string name="task_helper_app_killed">%1$s zorla kapatıldı</string>
+    <string name="empty_app_killed">Uygulama</string>
+
+    <string name="app_picker_dialog_title">Bir uygulama seç</string>
+    <string name="active_edge_app_select_title">Uygulama seç</string>
+    <string name="active_edge_activity_select_title">Eylem seç</string>
+
+    <!-- Label for area where tiles can be added to the qs panel -->
+    <string name="drag_or_tap_to_add_tiles">Kare eklemek için basılı tut &amp; sürükle veya dokun</string>
+    <!-- Label for header of customize QS -->
+    <string name="drag_or_tap_to_rearrange_tiles">Düzenlemek için basılı tut &amp; sürükle veya kaldırmak için dokun</string>
+
+    <!-- Screenrecorder -->
+    <string name="screenrecord_stopdot_label">Durma noktasını göster\nTaşımak için uzun basın</string>
+    <string name="screenrecord_lowquality_label">Daha küçük dosya boyutu için düşük kalite</string>
+    <string name="screenrecord_longer_timeout_switch_label">Daha büyük dosya boyutu\n15 GB ile sınırla</string>
+
+    <!-- Sleep Mode -->
+    <string name="quick_settings_sleep_mode_label">Uyku modu</string>
+
+    <!-- Partial screenshot -->
+    <string name="global_screenshot_selector_capture_description">Kısmı ekran görüntüsü al</string>
+    <string name="global_screenshot_selector_cancel_description">İptal et</string>
+
+</resources>
